@@ -128,7 +128,7 @@
         "@kybernetwork/ks-elastic-sc": "KyberNetwork/ks-elastic-sc#362d9b6a726bcb286cc47c082c46f6259a5ae82d",
         "@sentry/node": "^7.14.0",
         "@sentry/tracing": "^7.14.0",
-        "aws-sdk": "^2.908.0",
+        "aws-sdk": "*",
         "axios": "^0.21.1",
         "balancer-labs-sor-v1": "npm:@balancer-labs/sor@0.3.2",
         "delay": "^4.4.0",

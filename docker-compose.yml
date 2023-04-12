@@ -1,10 +1,10 @@
-version: '3.8'
+version: '3'
 
 services:
   ganache:
     image: '0xorg/ganache-cli:8.1.1'
     ports:
-      - '8545:8545'
+      - "8545:8545"
     environment:
       VERSION: 8.0.1
       CHAIN_ID: 1337
@@ -25,17 +25,16 @@ services:
     build:
       context: ./0x-api
       dockerfile: Dockerfile
-    command: npm start
     volumes:
       - ./0x-api:/usr/app
-    restart: always
     ports:
-      - "3000:3000"
+      - "3001:3000"
     environment:
       DB_HOST: db
       DB_PORT: 5432
       DB_NAME: api
-      DB_USER: root
-      DB_PASSWORD: root
+      DB_USER: postgres
+      DB_PASSWORD: postgres
     depends_on:
       - db
+   
